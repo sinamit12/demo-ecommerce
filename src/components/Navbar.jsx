@@ -51,11 +51,13 @@ align-items: center;
 justify-content: flex-end;
 margin-left: 10px;
 
+
 `
 const MenuItem =styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 5px;
+  padding: 0 10px;
   
 
 `
