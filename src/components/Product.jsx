@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {Link, useLocation } from "react-router-dom"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -76,6 +76,9 @@ background-color: white;
 
 
 const Product = ({item}) => {
+const location = useLocation();
+  const id = location.pathname.split("/")[2];
+
   return (
     <Container>
       <Circle />
@@ -85,7 +88,9 @@ const Product = ({item}) => {
            <ShoppingCartIcon />
           </Icon>
           <Icon>
+            <Link to={`/product/${item._id}`}>
             <SearchIcon />
+            </Link>
           </Icon>
            <Icon>
               < FavoriteIcon />
